@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #04140d;
-  --foreground: #ecfdf5;
-  --green-dark: #04140d;
-  --green-surface: #072217;
-  --green-card: #0b2f21;
-  --green-border: #14532d;
+  --background: #0e2a1d;
+  --foreground: #f0fdf4;
+  --green-dark: #0e2a1d;
+  --green-surface: #143d2b;
+  --green-card: #1a4732;
+  --green-border: #2a7250;
   --accent-emerald: #10b981;
-  --accent-mint: #34d399;
-  --accent-glow: #6ee7b7;
+  --accent-mint: #4ade80;
+  --accent-glow: #86efac;
 }
 
 @theme inline {
@@ -25,8 +25,8 @@ html {
 }
 
 body {
-  background-color: #04140d;
-  color: #ecfdf5;
+  background-color: #0e2a1d;
+  color: #f0fdf4;
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
@@ -35,13 +35,13 @@ body {
 }
 
 ::selection {
-  background: #059669;
-  color: #ffffff;
+  background: #22c55e;
+  color: #092618;
 }
 
 /* Accessibility: WCAG Focus-Visible outline */
 :focus-visible {
-  outline: 2px solid #34d399 !important;
+  outline: 2px solid #4ade80 !important;
   outline-offset: 3px !important;
   border-radius: 6px;
 }
@@ -62,40 +62,40 @@ body {
   }
 }
 
-/* Custom subtle scrollbar in green */
+/* Custom subtle scrollbar in lightened green */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #04140d;
+  background: #0e2a1d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #14532d;
+  background: #2a7250;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a34a;
+  background: #4ade80;
 }
 
 /* Background grid patterns */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(74, 222, 128, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(74, 222, 128, 0.08) 1px, transparent 1px);
 }
 
 .bg-dot-pattern {
   background-size: 24px 24px;
-  background-image: radial-gradient(rgba(52, 211, 153, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(74, 222, 128, 0.22) 1px, transparent 1px);
 }
 
 /* Glassmorphism surfaces */
 .glass-panel {
-  background: rgba(7, 34, 23, 0.75);
+  background: rgba(20, 61, 43, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(52, 211, 153, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.25);
 }
 
 .glass-panel-hover {
@@ -103,15 +103,15 @@ body {
 }
 
 .glass-panel-hover:hover {
-  border-color: rgba(52, 211, 153, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2);
+  border-color: rgba(74, 222, 128, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.25);
 }
 
 /* Custom Glow Utilities */
 .emerald-glow {
-  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 25px -5px rgba(34, 197, 94, 0.35);
 }
 
 .mint-glow {
-  box-shadow: 0 0 30px -5px rgba(52, 211, 153, 0.35);
+  box-shadow: 0 0 30px -5px rgba(74, 222, 128, 0.4);
 }

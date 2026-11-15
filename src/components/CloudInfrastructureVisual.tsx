@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { 
-  ShieldCheck, 
-  Database, 
+import {
+  ShieldCheck,
+  Database,
   TrendingDown,
   Boxes
 } from 'lucide-react';
@@ -21,25 +21,25 @@ interface TopologyNode {
 const NODES: TopologyNode[] = [
   {
     id: 'finops',
-    name: 'FinOps Right-Sizing & Autoscaling',
+    name: 'FinOps Multi-Cloud Right-Sizing',
     category: 'Cost Optimization',
     status: 'SAVING 38%',
-    metrics: 'Karpenter // Spot EC2',
-    spec: 'Automated cluster scaling, eliminating idle over-provisioned nodes and reducing monthly cloud compute bills.',
+    metrics: 'AWS / GCP / Azure',
+    spec: 'Automated cluster scaling, eliminating idle over-provisioned VMs and reducing monthly cloud compute bills.',
     icon: TrendingDown
   },
   {
     id: 'secure-edge',
-    name: 'AWS WAF & TLS Ingress',
+    name: 'Cloud WAF & TLS Ingress',
     category: 'DevSecOps & SRE',
     status: 'ENFORCED',
     metrics: 'WAF Rule Sets // DDoS Shield',
-    spec: 'Application Load Balancer protected by AWS WAF rate-limiting, geo-blocking, and automated SSL/TLS renewal.',
+    spec: 'Application Load Balancer protected by WAF rate-limiting, geo-blocking, and automated SSL/TLS renewal.',
     icon: ShieldCheck
   },
   {
     id: 'compute',
-    name: 'Hardened Kubernetes (EKS / Docker)',
+    name: 'Hardened Kubernetes (EKS, GKE, AKS, Docker)',
     category: 'Compute & Cluster',
     status: 'ACTIVE',
     metrics: 'Zero-Root // Trivy Scanned',
@@ -48,7 +48,7 @@ const NODES: TopologyNode[] = [
   },
   {
     id: 'data',
-    name: 'Encrypted Multi-AZ RDS & S3',
+    name: 'Encrypted Persistence & Cloud Storage',
     category: 'Secure Persistence',
     status: 'ONLINE',
     metrics: 'KMS Key // Private Subnets',
@@ -61,33 +61,33 @@ export default function CloudInfrastructureVisual() {
   const [activeNode, setActiveNode] = useState<TopologyNode>(NODES[0]);
 
   return (
-    <div className="p-5 font-mono text-xs text-emerald-100 flex flex-col justify-between h-[450px] bg-[#072217]/80">
-      
+    <div className="p-5 font-mono text-xs text-emerald-100 flex flex-col justify-between h-[450px] bg-[#143d2b]">
+
       {/* Visual Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-emerald-900/80">
+      <div className="flex items-center justify-between pb-3 border-b border-emerald-700/70">
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="font-bold tracking-wider text-emerald-300">SECURE & COST-OPTIMIZED TOPOLOGY</span>
+          <span className="font-bold tracking-wider text-emerald-200">MULTI-CLOUD TOPOLOGY</span>
         </div>
-        <span className="text-[10px] text-emerald-400/80 bg-emerald-950/90 px-2 py-0.5 rounded border border-emerald-500/30">
-          AWS // ZERO-TRUST
+        <span className="text-[10px] text-emerald-300 bg-[#0e2a1d] px-2 py-0.5 rounded border border-emerald-600/50">
+          AWS // GCP // AZURE
         </span>
       </div>
 
       {/* Interactive Architecture SVG Diagram */}
-      <div className="relative my-3 flex-1 flex items-center justify-center bg-[#04140d]/60 rounded-xl p-3 border border-emerald-950">
-        
+      <div className="relative my-3 flex-1 flex items-center justify-center bg-[#0e2a1d] rounded-xl p-3 border border-emerald-700/60 shadow-inner">
+
         {/* SVG Flow Connections in Green */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="greenPulse" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#10b981" stopOpacity="0.2" />
-              <stop offset="50%" stopColor="#34d399" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#059669" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#22c55e" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="#4ade80" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#10b981" stopOpacity="0.3" />
             </linearGradient>
           </defs>
-          <path d="M 50 70 L 160 70 L 160 135 L 270 135" fill="none" stroke="#10b981" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.6" />
-          <path d="M 160 135 L 160 200 L 270 200" fill="none" stroke="#34d399" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.6" />
+          <path d="M 50 70 L 160 70 L 160 135 L 270 135" fill="none" stroke="#22c55e" strokeWidth="1.8" strokeDasharray="4 3" opacity="0.8" />
+          <path d="M 160 135 L 160 200 L 270 200" fill="none" stroke="#4ade80" strokeWidth="1.8" strokeDasharray="4 3" opacity="0.8" />
         </svg>
 
         {/* 4 Interactive Nodes */}
@@ -101,26 +101,24 @@ export default function CloudInfrastructureVisual() {
                 key={node.id}
                 type="button"
                 onClick={() => setActiveNode(node)}
-                className={`text-left p-3 rounded-xl border transition-all cursor-pointer ${
-                  isSelected
-                    ? 'bg-[#0a2e1f] border-emerald-400 shadow-lg shadow-emerald-950/60'
-                    : 'bg-[#072217]/70 border-emerald-900/80 hover:border-emerald-600/60'
-                }`}
+                className={`text-left p-3 rounded-xl border transition-all cursor-pointer ${isSelected
+                  ? 'bg-[#1a4732] border-emerald-400 shadow-md shadow-emerald-950/40'
+                  : 'bg-[#143d2b] border-emerald-700/80 hover:border-emerald-500'
+                  }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <div className={`p-1.5 rounded-lg ${isSelected ? 'bg-emerald-500 text-slate-950' : 'bg-emerald-950 text-emerald-400'}`}>
+                  <div className={`p-1.5 rounded-lg ${isSelected ? 'bg-emerald-400 text-slate-950' : 'bg-[#0e2a1d] text-emerald-300'}`}>
                     <Icon className="w-4 h-4" />
                   </div>
-                  <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
-                    node.status.includes('SAVING') 
-                      ? 'bg-emerald-500 text-slate-950 font-bold'
-                      : 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/30'
-                  }`}>
+                  <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${node.status.includes('SAVING')
+                    ? 'bg-emerald-400 text-slate-950 font-bold'
+                    : 'bg-[#0e2a1d] text-emerald-200 border border-emerald-600/50'
+                    }`}>
                     {node.status}
                   </span>
                 </div>
                 <div className="font-bold text-xs text-white truncate">{node.name}</div>
-                <div className="text-[10px] text-emerald-400/80 truncate mt-0.5">{node.metrics}</div>
+                <div className="text-[10px] text-emerald-300/90 truncate mt-0.5">{node.metrics}</div>
               </button>
             );
           })}
@@ -129,17 +127,17 @@ export default function CloudInfrastructureVisual() {
       </div>
 
       {/* Selected Node Inspector Detail */}
-      <div className="p-3.5 rounded-xl bg-[#04140d]/90 border border-emerald-900/90 space-y-1.5">
+      <div className="p-3.5 rounded-xl bg-[#0e2a1d] border border-emerald-700/60 space-y-1.5">
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
+          <span className="text-[10px] text-emerald-300 font-bold uppercase tracking-wider">
             {activeNode.category}
           </span>
-          <span className="text-[10px] text-emerald-300 font-mono">
+          <span className="text-[10px] text-emerald-200 font-mono">
             {activeNode.metrics}
           </span>
         </div>
         <div className="text-xs text-white font-bold">{activeNode.name}</div>
-        <p className="text-[11px] text-emerald-100/70 font-sans leading-relaxed line-clamp-2">
+        <p className="text-[11px] text-emerald-100/80 font-sans leading-relaxed line-clamp-2">
           {activeNode.spec}
         </p>
       </div>

@@ -4,13 +4,13 @@ export const PERSONAL_INFO = {
   name: "K. Ayesha",
   title: "DevOps & Cloud Engineer | FinOps & DevSecOps",
   tagline: "Cloud Infrastructure Cost Optimization & Secure DevSecOps Systems.",
-  bio: "Specializing in slashing cloud infrastructure bills, right-sizing AWS workloads, and hardening production systems with automated DevSecOps and Kubernetes.",
+  bio: "Specializing in slashing cloud infrastructure bills, right-sizing multi-cloud workloads across AWS, Azure, GCP, and hardening production systems with automated DevSecOps and Kubernetes.",
   status: "Available for Freelance & Contract Projects",
-  location: "Bengaluru, India (Open to Global Remote)",
   linkedin: "https://www.linkedin.com/in/kalaigarayesha/",
   github: "https://github.com/Kalaigar-Ayesha",
   email: "kalaigarayesha@gmail.com",
-  phone: "+91 91136 84892", // [Editable Phone Number / WhatsApp]
+  phone: "+91 76763 89922",
+  phoneRaw: "7676389922",
   calendarUrl: "https://calendly.com",
 };
 
@@ -267,15 +267,14 @@ export const PROFESSIONAL_EXPERIENCE: ExperienceItem[] = [
   {
     id: "asariya-forum",
     organization: "Asariya Forum",
-    role: "DevOps & Cloud Engineer [Consultant / Contributor]",
-    period: "[Dates / Duration: Editable Placeholder]",
-    location: "Remote",
+    role: "DevOps & Cloud Engineer",
+    period: "",
+    location: "",
     description: "Contributed to cloud infrastructure, deployment reliability, and automation initiatives.",
     responsibilities: [
       "Configured and maintained scalable cloud environments ensuring high availability and uptime",
       "Automated repetitive deployment workflows and established standardized CI/CD pipelines",
-      "Implemented security best practices for access control, environment variables, and cloud configurations",
-      "[Key quantifiable impact / project scope: Editable Placeholder]"
+      "Implemented security best practices for access control, environment variables, and cloud configurations"
     ],
     technologies: ["AWS", "Docker", "CI/CD", "Linux", "Terraform", "Git"],
     verifiedStatus: "Verified Professional Experience"
@@ -283,15 +282,14 @@ export const PROFESSIONAL_EXPERIENCE: ExperienceItem[] = [
   {
     id: "mentor-me",
     organization: "Mentor Me",
-    role: "Technical Mentor & DevOps Contributor",
-    period: "[Dates / Duration: Editable Placeholder]",
-    location: "Remote",
-    description: "Mentored engineering peers and contributed to DevOps best practices, cloud deployments, and pipeline architectures.",
+    role: "Technical & DevOps Contributor",
+    period: "",
+    location: "",
+    description: "Contributed to DevOps best practices, cloud deployments, and pipeline architectures across engineering initiatives.",
     responsibilities: [
       "Guided developers on Docker containerization, Kubernetes fundamentals, and cloud migration strategies",
       "Advised on pipeline design using GitHub Actions, automated testing, and security scanning",
-      "Conducted architecture reviews and troubleshooting sessions for distributed applications",
-      "[Key mentorship milestone / community metric: Editable Placeholder]"
+      "Conducted architecture reviews and troubleshooting sessions for distributed applications"
     ],
     technologies: ["Docker", "Kubernetes", "GitHub Actions", "Linux", "Python", "Cloud Architecture"],
     verifiedStatus: "Verified Professional Experience"

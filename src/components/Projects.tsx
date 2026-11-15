@@ -26,21 +26,21 @@ export default function Projects() {
       });
 
   return (
-    <section id="projects" className="py-20 bg-[#03140c] relative border-t border-emerald-950">
+    <section id="projects" className="py-20 bg-[#0e2a1d] relative border-t border-emerald-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-mono tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#143d2b] border border-emerald-600/50 text-emerald-200 text-xs font-mono tracking-wider mb-3">
               <FolderGit2 className="w-3.5 h-3.5" />
               <span>VERIFIED ENGINEERING CASE STUDIES</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
               Production Architectures & Verified Repositories
             </h2>
-            <p className="mt-2 text-sm text-emerald-100/70">
-              Technical case studies backed by real GitHub repositories, Dockerfiles, and CI/CD pipelines.
+            <p className="mt-2 text-sm text-emerald-100/80">
+              Technical case studies backed by real GitHub repositories, Dockerfiles, and CI/CD pipelines across clouds.
             </p>
           </div>
 
@@ -53,8 +53,8 @@ export default function Projects() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-emerald-500 text-slate-950 font-bold shadow'
-                    : 'bg-[#072217] text-emerald-300/80 border border-emerald-900 hover:border-emerald-500/50'
+                    ? 'bg-emerald-400 text-slate-950 font-bold shadow-sm'
+                    : 'bg-[#143d2b] text-emerald-200 border border-emerald-700/80 hover:border-emerald-400'
                 }`}
               >
                 {cat}
@@ -71,15 +71,15 @@ export default function Projects() {
             return (
               <div
                 key={project.slug}
-                className="rounded-2xl bg-[#072217] border border-emerald-900/80 hover:border-emerald-500/50 p-6 flex flex-col justify-between transition-all group"
+                className="rounded-2xl bg-[#143d2b] border border-emerald-700/70 hover:border-emerald-400 p-6 flex flex-col justify-between transition-all group shadow-sm"
               >
                 <div>
                   {/* Category & Badge */}
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-500/30 text-emerald-300">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0e2a1d] border border-emerald-600/50 text-emerald-200 font-medium">
                       {project.category}
                     </span>
-                    <span className="text-[10px] font-mono text-emerald-400">
+                    <span className="text-[10px] font-mono text-emerald-300">
                       {project.timeline}
                     </span>
                   </div>
@@ -88,17 +88,17 @@ export default function Projects() {
                   <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-emerald-400 font-mono mt-0.5 mb-3">
+                  <p className="text-xs text-emerald-300 font-mono mt-0.5 mb-3 font-medium">
                     {project.subtitle}
                   </p>
 
-                  {/* Problem vs Implementation (Minimal) */}
+                  {/* Problem vs Architecture (Minimal) */}
                   <div className="space-y-2 text-xs mb-4">
-                    <div className="p-2.5 rounded-lg bg-[#04140d] border border-emerald-950 text-emerald-200/80">
-                      <strong className="text-emerald-400 font-semibold">Problem: </strong>
+                    <div className="p-2.5 rounded-lg bg-[#0e2a1d] border border-emerald-700/60 text-emerald-100">
+                      <strong className="text-emerald-300 font-semibold">Problem: </strong>
                       {project.problem.statement}
                     </div>
-                    <div className="p-2.5 rounded-lg bg-[#04140d] border border-emerald-950 text-emerald-100">
+                    <div className="p-2.5 rounded-lg bg-[#0e2a1d] border border-emerald-700/60 text-emerald-100">
                       <strong className="text-emerald-300 font-semibold">Architecture: </strong>
                       {project.architecture.description}
                     </div>
@@ -109,13 +109,13 @@ export default function Projects() {
                     {allTools.slice(0, 5).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-0.5 rounded text-[10px] font-mono bg-[#04140d] text-emerald-300 border border-emerald-900/60"
+                        className="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0e2a1d] text-emerald-200 border border-emerald-700/70 font-medium"
                       >
                         {tech}
                       </span>
                     ))}
                     {allTools.length > 5 && (
-                      <span className="px-1.5 py-0.5 rounded text-[10px] font-mono text-emerald-400/80">
+                      <span className="px-1.5 py-0.5 rounded text-[10px] font-mono text-emerald-300">
                         +{allTools.length - 5}
                       </span>
                     )}
@@ -123,10 +123,10 @@ export default function Projects() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="pt-4 border-t border-emerald-900/60 flex items-center justify-between">
+                <div className="pt-4 border-t border-emerald-700/60 flex items-center justify-between">
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-200"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-300 hover:text-white"
                   >
                     <BookOpen className="w-3.5 h-3.5" />
                     <span>Full 12-Pt Study</span>
@@ -138,7 +138,7 @@ export default function Projects() {
                       href={project.verifiedRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-[#04140d] border border-emerald-900/80 hover:border-emerald-500 text-emerald-400 hover:text-white transition-all"
+                      className="p-2 rounded-lg bg-[#0e2a1d] border border-emerald-700/80 hover:border-emerald-400 text-emerald-300 hover:text-white transition-all shadow-sm"
                       title="View GitHub Repository"
                     >
                       <GitHubIcon className="w-3.5 h-3.5" />
@@ -148,7 +148,7 @@ export default function Projects() {
                         href={project.liveDemoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-[#04140d] border border-emerald-900/80 hover:border-emerald-500 text-emerald-400 hover:text-white transition-all"
+                        className="p-2 rounded-lg bg-[#0e2a1d] border border-emerald-700/80 hover:border-emerald-400 text-emerald-300 hover:text-white transition-all shadow-sm"
                         title="Live Demo"
                       >
                         <ExternalLink className="w-3.5 h-3.5" />

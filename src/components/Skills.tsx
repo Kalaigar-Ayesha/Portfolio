@@ -16,31 +16,31 @@ const SKILL_CLUSTERS = [
     title: 'Cloud Cost Optimization (FinOps)',
     icon: TrendingDown,
     tag: 'ROI Focus',
-    skills: ['AWS Cost Explorer', 'CloudWatch Telemetry', 'Karpenter Autoscaling', 'EC2 & RDS Right-Sizing', 'Spot Instance Automation', 'Idle Resource Reclamation']
+    skills: ['AWS Cost Explorer', 'GCP / Azure Billing', 'Karpenter Autoscaling', 'Compute & DB Right-Sizing', 'Spot Instance Automation', 'Idle Resource Reclamation']
   },
   {
     title: 'Secure Cloud & DevSecOps',
     icon: ShieldCheck,
     tag: 'Zero-Trust',
-    skills: ['Trivy Container Scanning', 'Gitleaks Secret Detection', 'AWS IAM Least-Privilege', 'KMS Encryption', 'VPC Private Subnets', 'AWS WAF Mitigation']
+    skills: ['Trivy Container Scanning', 'Gitleaks Secret Detection', 'IAM Least-Privilege', 'KMS Encryption', 'VPC Private Subnets', 'Cloud WAF Mitigation']
   },
   {
-    title: 'AWS Cloud Infrastructure',
+    title: 'Multi-Cloud Infrastructure',
     icon: Cloud,
-    tag: 'Cloud Native',
-    skills: ['AWS VPC & Subnets', 'EC2 Fleets', 'RDS Multi-AZ', 'S3 Lifecycle Policies', 'Route 53 & ALB', 'IAM Roles & Policies']
+    tag: 'Any Provider',
+    skills: ['AWS (EC2, VPC, EKS, RDS, S3)', 'Google Cloud Platform (GCP)', 'Microsoft Azure', 'Networking & Private Subnets', 'DNS & Load Balancers', 'Cloud Architecture']
   },
   {
     title: 'Docker & Kubernetes',
     icon: Boxes,
     tag: 'Orchestration',
-    skills: ['Docker & Multi-Stage Builds', 'Docker Compose', 'Kubernetes EKS', 'Helm Charts', 'PodDisruptionBudgets', 'ConfigMaps & Secrets']
+    skills: ['Docker & Multi-Stage Builds', 'Docker Compose', 'Kubernetes (EKS, GKE, AKS)', 'Helm Charts', 'PodDisruptionBudgets', 'ConfigMaps & Secrets']
   },
   {
     title: 'CI/CD & Infrastructure as Code',
     icon: Workflow,
     tag: 'Automation',
-    skills: ['GitHub Actions', 'Terraform Modules', 'Remote S3/DynamoDB State', 'ArgoCD GitOps', 'Automated Testing Gates', 'Zero-Downtime Rollouts']
+    skills: ['GitHub Actions', 'Terraform Modules', 'Remote State Management', 'ArgoCD GitOps', 'Automated Testing Gates', 'Zero-Downtime Rollouts']
   },
   {
     title: 'Monitoring & Reliability (SRE)',
@@ -52,20 +52,20 @@ const SKILL_CLUSTERS = [
 
 export default function Skills() {
   return (
-    <section id="capabilities" className="py-20 bg-[#04140d] relative border-t border-emerald-950">
+    <section id="capabilities" className="py-20 bg-[#0e2a1d] relative border-t border-emerald-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-mono tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#143d2b] border border-emerald-600/50 text-emerald-200 text-xs font-mono tracking-wider mb-3">
             <Cpu className="w-3.5 h-3.5" />
             <span>TECHNICAL CAPABILITIES</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-            Core DevOps & Cloud Engineering Stack
+            DevOps & Multi-Cloud Engineering Stack
           </h2>
-          <p className="mt-2 text-sm text-emerald-100/70">
-            Battle-tested technologies for optimizing infrastructure cost, security, and release velocity.
+          <p className="mt-2 text-sm text-emerald-100/80">
+            Battle-tested technologies across AWS, Azure, GCP, and Kubernetes for optimizing cloud cost and security.
           </p>
         </div>
 
@@ -77,14 +77,14 @@ export default function Skills() {
             return (
               <div 
                 key={cluster.title}
-                className="rounded-2xl bg-[#072217] border border-emerald-900/80 hover:border-emerald-500/50 p-6 flex flex-col justify-between transition-all group"
+                className="rounded-2xl bg-[#143d2b] border border-emerald-700/70 hover:border-emerald-400 p-6 flex flex-col justify-between transition-all group shadow-sm"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-[#0e2a1d] border border-emerald-500/40 flex items-center justify-center text-emerald-300 group-hover:scale-105 transition-transform">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/30">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0e2a1d] text-emerald-200 border border-emerald-600/50 font-medium">
                       {cluster.tag}
                     </span>
                   </div>
@@ -97,7 +97,7 @@ export default function Skills() {
                     {cluster.skills.map((skill) => (
                       <span 
                         key={skill}
-                        className="px-2 py-1 rounded-md text-[11px] font-mono bg-[#04140d] text-emerald-200 border border-emerald-900/80"
+                        className="px-2 py-1 rounded-md text-[11px] font-mono bg-[#0e2a1d] text-emerald-200 border border-emerald-700/70 font-medium"
                       >
                         {skill}
                       </span>
