@@ -4,57 +4,49 @@ import Hero from '@/components/Hero';
 import TargetAudience from '@/components/TargetAudience';
 import ProblemsSolved from '@/components/ProblemsSolved';
 import Services from '@/components/Services';
-import EngagementOptions from '@/components/EngagementOptions';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Approach from '@/components/Approach';
-import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#070b14] text-slate-100 selection:bg-cyan-500/30 selection:text-white">
-      {/* 1. Premium Navigation Bar */}
+    <div className="flex flex-col min-h-screen bg-[#04140d] text-emerald-100 selection:bg-emerald-500/30 selection:text-white">
+      {/* 1. Navigation Bar */}
       <Navbar />
 
       <main className="flex-grow">
-        {/* 2. Hero Section with Powerful Headline */}
+        {/* 2. Hero Section: Cost Optimization & Secure Infra */}
         <Hero />
 
-        {/* 3. Who I Help (Target Clients: SaaS, Agencies, Founders, CTOs) */}
+        {/* 3. Who I Work With */}
         <TargetAudience />
 
-        {/* 4. Business Problems I Solve */}
+        {/* 4. High-Cost Problems I Solve */}
         <ProblemsSolved />
 
-        {/* 5. Core Consulting Services */}
+        {/* 5. Core Services */}
         <Services />
 
-        {/* 6. Three Clear Engagement Options & Pricing Packages */}
-        <EngagementOptions />
-
-        {/* 7. Featured Engineering Case Studies Library */}
+        {/* 6. Verified Case Studies */}
         <Projects />
 
-        {/* 8. Technical Capabilities Matrix */}
+        {/* 7. Technical Capabilities */}
         <Skills />
 
-        {/* 9. Professional Experience & Track Record */}
+        {/* 8. Professional Experience */}
         <Experience />
 
-        {/* 10. Engineering Approach (How I Work) */}
+        {/* 9. Engineering Methodology */}
         <Approach />
 
-        {/* 11. Testimonials (Client Feedback Placeholders) */}
-        <Testimonials />
-
-        {/* 12. Strong Contact & Project Inquiry System */}
+        {/* 10. Direct Project Collaboration (Phone, Email, LinkedIn) */}
         <Contact />
       </main>
 
-      {/* 13. Professional Engineering Footer */}
+      {/* 11. Engineering Footer */}
       <Footer />
     </div>
   );

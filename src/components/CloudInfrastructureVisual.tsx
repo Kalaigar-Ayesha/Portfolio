@@ -2,18 +2,17 @@
 
 import React, { useState } from 'react';
 import { 
-  Cloud, 
   ShieldCheck, 
   Database, 
-  CheckCircle2,
+  TrendingDown,
   Boxes
 } from 'lucide-react';
 
 interface TopologyNode {
   id: string;
   name: string;
-  category: 'Edge & Network' | 'Compute & Cluster' | 'Data & Persistence' | 'DevSecOps & SRE';
-  status: 'ONLINE' | 'ACTIVE' | 'ENFORCED' | 'HEALTHY';
+  category: 'Cost Optimization' | 'Compute & Cluster' | 'Secure Persistence' | 'DevSecOps & SRE';
+  status: 'ONLINE' | 'ACTIVE' | 'ENFORCED' | 'SAVING 38%';
   metrics: string;
   spec: string;
   icon: React.ElementType;
@@ -21,119 +20,128 @@ interface TopologyNode {
 
 const NODES: TopologyNode[] = [
   {
-    id: 'edge',
-    name: 'Route 53 & ALB Ingress',
-    category: 'Edge & Network',
-    status: 'ONLINE',
-    metrics: 'TLS 1.3 // Multi-AZ',
-    spec: 'AWS Application Load Balancer with ACM automated SSL termination and WAF DDoS mitigation.',
-    icon: Cloud
+    id: 'finops',
+    name: 'FinOps Right-Sizing & Autoscaling',
+    category: 'Cost Optimization',
+    status: 'SAVING 38%',
+    metrics: 'Karpenter // Spot EC2',
+    spec: 'Automated cluster scaling, eliminating idle over-provisioned nodes and reducing monthly cloud compute bills.',
+    icon: TrendingDown
+  },
+  {
+    id: 'secure-edge',
+    name: 'AWS WAF & TLS Ingress',
+    category: 'DevSecOps & SRE',
+    status: 'ENFORCED',
+    metrics: 'WAF Rule Sets // DDoS Shield',
+    spec: 'Application Load Balancer protected by AWS WAF rate-limiting, geo-blocking, and automated SSL/TLS renewal.',
+    icon: ShieldCheck
   },
   {
     id: 'compute',
-    name: 'Kubernetes EKS / EC2 Fleet',
+    name: 'Hardened Kubernetes (EKS / Docker)',
     category: 'Compute & Cluster',
     status: 'ACTIVE',
-    metrics: 'HPA Autoscaling // Karpenter',
-    spec: 'Multi-node container cluster with PodDisruptionBudgets, zero-downtime rolling updates, and self-healing.',
+    metrics: 'Zero-Root // Trivy Scanned',
+    spec: 'Containerized microservices running with read-only root filesystems, resource limits, and automated health checks.',
     icon: Boxes
   },
   {
     id: 'data',
-    name: 'RDS Multi-AZ & S3 Tiering',
-    category: 'Data & Persistence',
-    status: 'HEALTHY',
-    metrics: 'Encrypted KMS // 99.99%',
-    spec: 'Isolated private subnets, automated daily snapshots, read replicas, and S3 lifecycle retention rules.',
+    name: 'Encrypted Multi-AZ RDS & S3',
+    category: 'Secure Persistence',
+    status: 'ONLINE',
+    metrics: 'KMS Key // Private Subnets',
+    spec: 'Isolated inside non-routable private subnets. Encrypted at rest via KMS with automated lifecycle retention.',
     icon: Database
-  },
-  {
-    id: 'security',
-    name: 'Trivy Scan & DevSecOps Gate',
-    category: 'DevSecOps & SRE',
-    status: 'ENFORCED',
-    metrics: '0 Critical CVEs Allowed',
-    spec: 'Shift-left security blocking builds on exit-code 1 for CRITICAL vulnerabilities before Docker Hub publishing.',
-    icon: ShieldCheck
   }
 ];
 
 export default function CloudInfrastructureVisual() {
-  const [selectedNodeId, setSelectedNodeId] = useState<string>('compute');
-
-  const selectedNode = NODES.find(n => n.id === selectedNodeId) || NODES[1];
-  const Icon = selectedNode.icon;
+  const [activeNode, setActiveNode] = useState<TopologyNode>(NODES[0]);
 
   return (
-    <div className="w-full rounded-2xl bg-[#090e1a] border border-cyan-500/30 shadow-2xl shadow-cyan-950/40 p-5 sm:p-6 font-sans relative overflow-hidden">
+    <div className="p-5 font-mono text-xs text-emerald-100 flex flex-col justify-between h-[450px] bg-[#072217]/80">
       
       {/* Visual Header */}
-      <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+      <div className="flex items-center justify-between pb-3 border-b border-emerald-900/80">
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-            Production Cloud Architecture Topology
-          </span>
+          <span className="font-bold tracking-wider text-emerald-300">SECURE & COST-OPTIMIZED TOPOLOGY</span>
         </div>
-        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950/80 border border-blue-500/30 text-cyan-300">
-          AWS Multi-AZ Baseline
+        <span className="text-[10px] text-emerald-400/80 bg-emerald-950/90 px-2 py-0.5 rounded border border-emerald-500/30">
+          AWS // ZERO-TRUST
         </span>
       </div>
 
-      {/* Interactive Node Grid */}
-      <div className="grid grid-cols-2 gap-3 my-4">
-        {NODES.map((node) => {
-          const NodeIcon = node.icon;
-          const isSelected = selectedNodeId === node.id;
+      {/* Interactive Architecture SVG Diagram */}
+      <div className="relative my-3 flex-1 flex items-center justify-center bg-[#04140d]/60 rounded-xl p-3 border border-emerald-950">
+        
+        {/* SVG Flow Connections in Green */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="greenPulse" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#10b981" stopOpacity="0.2" />
+              <stop offset="50%" stopColor="#34d399" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#059669" stopOpacity="0.2" />
+            </linearGradient>
+          </defs>
+          <path d="M 50 70 L 160 70 L 160 135 L 270 135" fill="none" stroke="#10b981" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.6" />
+          <path d="M 160 135 L 160 200 L 270 200" fill="none" stroke="#34d399" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.6" />
+        </svg>
 
-          return (
-            <button
-              key={node.id}
-              onClick={() => setSelectedNodeId(node.id)}
-              className={`p-3.5 rounded-xl border text-left transition-all relative ${
-                isSelected
-                  ? 'bg-blue-950/60 border-cyan-400 shadow-md shadow-cyan-950/50'
-                  : 'bg-slate-900/60 border-slate-800/80 hover:border-slate-700 hover:bg-slate-800/40'
-              }`}
-            >
-              <div className="flex items-center justify-between mb-2">
-                <NodeIcon className={`w-4 h-4 ${isSelected ? 'text-cyan-300' : 'text-slate-400'}`} />
-                <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-emerald-400 font-semibold">
-                  {node.status}
-                </span>
-              </div>
-              <h4 className="text-xs font-bold text-white tracking-tight">{node.name}</h4>
-              <p className="text-[10px] font-mono text-cyan-400/90 mt-0.5 truncate">{node.metrics}</p>
-            </button>
-          );
-        })}
+        {/* 4 Interactive Nodes */}
+        <div className="grid grid-cols-2 gap-3 w-full z-10">
+          {NODES.map((node) => {
+            const Icon = node.icon;
+            const isSelected = activeNode.id === node.id;
+
+            return (
+              <button
+                key={node.id}
+                type="button"
+                onClick={() => setActiveNode(node)}
+                className={`text-left p-3 rounded-xl border transition-all cursor-pointer ${
+                  isSelected
+                    ? 'bg-[#0a2e1f] border-emerald-400 shadow-lg shadow-emerald-950/60'
+                    : 'bg-[#072217]/70 border-emerald-900/80 hover:border-emerald-600/60'
+                }`}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <div className={`p-1.5 rounded-lg ${isSelected ? 'bg-emerald-500 text-slate-950' : 'bg-emerald-950 text-emerald-400'}`}>
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
+                    node.status.includes('SAVING') 
+                      ? 'bg-emerald-500 text-slate-950 font-bold'
+                      : 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/30'
+                  }`}>
+                    {node.status}
+                  </span>
+                </div>
+                <div className="font-bold text-xs text-white truncate">{node.name}</div>
+                <div className="text-[10px] text-emerald-400/80 truncate mt-0.5">{node.metrics}</div>
+              </button>
+            );
+          })}
+        </div>
+
       </div>
 
-      {/* Active Node Deep-Dive Drawer */}
-      <div className="p-4 rounded-xl bg-[#0d1424] border border-cyan-500/20 space-y-2 text-xs">
+      {/* Selected Node Inspector Detail */}
+      <div className="p-3.5 rounded-xl bg-[#04140d]/90 border border-emerald-900/90 space-y-1.5">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-white font-bold">
-            <Icon className="w-4 h-4 text-cyan-400" />
-            <span>{selectedNode.name}</span>
-          </div>
-          <span className="text-[10px] font-mono text-slate-400 uppercase">{selectedNode.category}</span>
-        </div>
-        <p className="text-slate-300 text-[11px] leading-relaxed">
-          {selectedNode.spec}
-        </p>
-      </div>
-
-      {/* Live System Telemetry Strip */}
-      <div className="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-[10px] font-mono text-slate-500">
-        <div className="flex items-center gap-2">
-          <span className="text-emerald-400 flex items-center gap-1">
-            <CheckCircle2 className="w-3 h-3" />
-            99.99% Uptime Target
+          <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
+            {activeNode.category}
           </span>
-          <span className="text-slate-700">|</span>
-          <span>Terraform State Locked</span>
+          <span className="text-[10px] text-emerald-300 font-mono">
+            {activeNode.metrics}
+          </span>
         </div>
-        <span className="text-cyan-400/80">Interactive Architecture Illustration</span>
+        <div className="text-xs text-white font-bold">{activeNode.name}</div>
+        <p className="text-[11px] text-emerald-100/70 font-sans leading-relaxed line-clamp-2">
+          {activeNode.spec}
+        </p>
       </div>
 
     </div>

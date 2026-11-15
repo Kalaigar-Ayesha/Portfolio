@@ -2,15 +2,16 @@ import { ProjectItem, ServiceItem, ProblemSolutionItem, ExperienceItem, Testimon
 
 export const PERSONAL_INFO = {
   name: "K. Ayesha",
-  title: "DevOps Engineer | Cloud Engineer | DevSecOps Engineer",
-  tagline: "Building Reliable Cloud Infrastructure. Automating Deployments. Securing Production Systems.",
-  bio: "I help startups and software teams build reliable cloud infrastructure, automate software delivery, and improve production reliability through practical DevOps and Cloud Engineering.",
+  title: "DevOps & Cloud Engineer | FinOps & DevSecOps",
+  tagline: "Cloud Infrastructure Cost Optimization & Secure DevSecOps Systems.",
+  bio: "Specializing in slashing cloud infrastructure bills, right-sizing AWS workloads, and hardening production systems with automated DevSecOps and Kubernetes.",
   status: "Available for Freelance & Contract Projects",
-  location: "Open to Global Remote Contracts",
+  location: "Bengaluru, India (Open to Global Remote)",
   linkedin: "https://www.linkedin.com/in/kalaigarayesha/",
   github: "https://github.com/Kalaigar-Ayesha",
-  email: "kalaigarayesha@gmail.com", // [Editable Placeholder]
-  calendarUrl: "https://calendly.com", // [Editable Placeholder - e.g. your Calendly or Cal.com link]
+  email: "kalaigarayesha@gmail.com",
+  phone: "+91 91136 84892", // [Editable Phone Number / WhatsApp]
+  calendarUrl: "https://calendly.com",
 };
 
 export const BUSINESS_PROBLEMS: ProblemSolutionItem[] = [
