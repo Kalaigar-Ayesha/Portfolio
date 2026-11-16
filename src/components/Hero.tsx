@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section className="pt-28 pb-16 md:pt-36 md:pb-24 border-b border-slate-200 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Availability status badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D1FFBD] border border-emerald-300 text-xs font-mono font-medium text-emerald-950 mb-6 shadow-xs">
           <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
@@ -96,7 +96,7 @@ export default function Hero() {
 
         {/* 3 Core Engineering Pillars - Clean White Cards with #D1FFBD Accents */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
-          
+
           <div className="p-5 rounded-xl bg-white border border-slate-200 hover:border-emerald-300 transition-all shadow-xs hover:shadow-sm">
             <div className="w-9 h-9 rounded-lg bg-[#D1FFBD] border border-emerald-300 flex items-center justify-center text-emerald-950 mb-3.5">
               <TrendingDown className="w-4 h-4 text-emerald-900" />
