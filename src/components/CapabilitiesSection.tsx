@@ -54,18 +54,18 @@ export default function CapabilitiesSection() {
   ];
 
   return (
-    <section id="capabilities" className="py-20 md:py-28 border-b border-[#244b3a]">
+    <section id="capabilities" className="py-20 md:py-28 border-b border-slate-200 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="text-xs font-mono uppercase tracking-wider text-[#34d399] mb-2">
+          <div className="text-xs font-mono uppercase tracking-wider text-emerald-800 font-semibold mb-2">
             Engineering Capabilities
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
             How I Help Engineering Teams
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-emerald-100/70 max-w-xl">
+          <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl">
             Pragmatic infrastructure engineering focused on reducing cloud bills, securing container pipelines, and eliminating manual release stress.
           </p>
         </div>
@@ -77,35 +77,35 @@ export default function CapabilitiesSection() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#132b20] border border-[#244b3a] hover:border-[#2f604b] transition-colors"
+                className="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200 hover:border-emerald-300 transition-colors shadow-xs"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-9 h-9 rounded-lg bg-[#19382b] border border-[#2f604b] flex items-center justify-center text-[#34d399] shrink-0">
-                    <Icon className="w-4 h-4" />
+                  <div className="w-9 h-9 rounded-lg bg-[#D1FFBD] border border-emerald-300 flex items-center justify-center text-emerald-950 shrink-0">
+                    <Icon className="w-4 h-4 text-emerald-900" />
                   </div>
-                  <h3 className="text-base font-bold text-white leading-snug">
+                  <h3 className="text-base font-bold text-slate-900 leading-snug">
                     {item.title}
                   </h3>
                 </div>
 
-                <p className="text-xs text-slate-300 leading-relaxed mb-4">
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   {item.description}
                 </p>
 
                 <ul className="space-y-2 mb-5">
                   {item.points.map((pt, pIdx) => (
-                    <li key={pIdx} className="text-xs text-emerald-100/85 flex items-start gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#34d399] shrink-0 mt-0.5" />
+                    <li key={pIdx} className="text-xs text-slate-700 flex items-start gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="pt-3 border-t border-[#244b3a]/70 flex flex-wrap gap-1.5">
+                <div className="pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
                   {item.tools.map((tool, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2 py-0.5 rounded bg-[#19382b] border border-[#2f604b] text-[11px] font-mono text-emerald-200"
+                      className="px-2 py-0.5 rounded bg-white border border-slate-200 text-[11px] font-mono text-slate-800"
                     >
                       {tool}
                     </span>

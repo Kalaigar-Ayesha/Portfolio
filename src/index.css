@@ -1,22 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --bg-base: #0d1f17;
-  --bg-surface: #132b20;
-  --bg-card: #19382b;
-  --bg-card-hover: #1f4535;
-  --border-subtle: #244b3a;
-  --border-light: #2f604b;
-  --accent-primary: #34d399;
-  --accent-emerald: #10b981;
-  --text-primary: #f0fdf4;
-  --text-secondary: #a7f3d0;
-  --text-muted: #6ee7b7;
+  --bg-base: #ffffff;
+  --bg-surface: #f8fafc;
+  --bg-card: #ffffff;
+  --border-subtle: #e2e8f0;
+  --border-green: #bbf7d0;
+  --accent-light-green: #D1FFBD;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -41,26 +39,26 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d1f17;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #244b3a;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2f604b;
+  background: #94a3b8;
 }
 
 /* Clean text selection */
 ::selection {
-  background: #10b981;
-  color: #062316;
+  background: #D1FFBD;
+  color: #064e3b;
 }
 
 /* Accessible focus rings */
 :focus-visible {
-  outline: 2px solid #34d399 !important;
+  outline: 2px solid #10b981 !important;
   outline-offset: 2px !important;
 }
