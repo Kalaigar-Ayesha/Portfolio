@@ -40,18 +40,18 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
           <a
             href={`tel:${PERSONAL_INFO.phoneRaw}`}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm transition-colors shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#D1FFBD] hover:bg-[#bbf7d0] border border-emerald-400 text-emerald-950 font-bold text-xs sm:text-sm transition-all shadow-xs active:scale-95"
           >
-            <Phone className="w-4 h-4 text-[#D1FFBD]" />
+            <Phone className="w-4 h-4 text-emerald-900" />
             <span>Call {PERSONAL_INFO.phoneRaw}</span>
           </a>
 
           <button
             onClick={handleCopyPhone}
-            className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#D1FFBD] hover:bg-[#bbf7d0] border border-emerald-300 text-xs font-mono font-medium text-emerald-950 transition-colors shadow-xs"
+            className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-lg bg-white hover:bg-slate-50 border border-slate-300 text-xs font-mono font-medium text-slate-800 transition-colors shadow-xs"
             title="Copy phone number"
           >
-            {copied ? <Check className="w-3.5 h-3.5 text-emerald-800" /> : <Copy className="w-3.5 h-3.5 text-emerald-800" />}
+            {copied ? <Check className="w-3.5 h-3.5 text-emerald-700" /> : <Copy className="w-3.5 h-3.5 text-slate-500" />}
             <span>{copied ? 'Copied' : 'Copy Number'}</span>
           </button>
 

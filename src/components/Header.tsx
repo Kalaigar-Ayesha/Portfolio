@@ -71,9 +71,9 @@ export default function Header() {
 
           <a
             href="#contact"
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors shadow-xs"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#D1FFBD] hover:bg-[#bbf7d0] border border-emerald-400 text-emerald-950 text-xs font-bold transition-all shadow-xs active:scale-95"
           >
-            <Mail className="w-3.5 h-3.5 text-[#D1FFBD]" />
+            <Mail className="w-3.5 h-3.5 text-emerald-900" />
             <span>Get in Touch</span>
           </a>
         </div>
@@ -115,9 +115,9 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold"
+              className="flex items-center justify-center gap-2 py-2 rounded-lg bg-[#D1FFBD] hover:bg-[#bbf7d0] border border-emerald-400 text-emerald-950 text-xs font-bold transition-all shadow-xs"
             >
-              <Mail className="w-3.5 h-3.5 text-[#D1FFBD]" />
+              <Mail className="w-3.5 h-3.5 text-emerald-900" />
               <span>Get in Touch</span>
             </a>
           </div>

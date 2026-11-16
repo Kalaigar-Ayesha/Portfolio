@@ -216,24 +216,6 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     techStack: ["Kubernetes", "Helm", "ArgoCD", "GitHub Actions", "Docker", "Trivy", "SonarQube", "React", "Node.js", "MongoDB", "Nginx"],
     githubUrl: "https://github.com/Kalaigar-Ayesha/DevSecOps-Chat-Apllication",
     status: "Production-Ready"
-  },
-  {
-    id: "digital-library",
-    title: "Digital Library Ingestion & Retrieval Platform",
-    tagline: "High-Capacity Digital Document Archive for 6,000+ PDFs",
-    role: "Backend & Systems Engineer",
-    category: "Cloud & Systems",
-    description: "A scalable digital library architecture engineered to ingest, catalog, and index a collection of 6,000+ PDF documents. Features automated metadata parsing, fast structured querying, and resilient data storage management.",
-    architectureHighlights: [
-      "Resilient document ingestion pipeline processing batch uploads of 6,000+ PDF files",
-      "Metadata extraction and structured indexing for rapid search and retrieval",
-      "Optimized storage hierarchy ensuring minimal latency and high availability",
-      "RESTful API endpoints allowing seamless search, catalog queries, and file access",
-      "Designed for cloud portability and scalable object storage integration"
-    ],
-    techStack: ["Python", "REST APIs", "Data Ingestion", "PDF Processing", "Linux", "Storage Architecture"],
-    githubUrl: "https://github.com/Kalaigar-Ayesha/Registration-of-Digital-Library",
-    status: "Enterprise Prototype"
   }
 ];
 
@@ -264,21 +246,6 @@ export const TECHNICAL_SKILLS = {
 };
 
 export const PROFESSIONAL_EXPERIENCE: ExperienceItem[] = [
-  {
-    id: "asariya-forum",
-    organization: "Asariya Forum",
-    role: "DevOps & Cloud Engineer",
-    period: "",
-    location: "",
-    description: "Contributed to cloud infrastructure, deployment reliability, and automation initiatives.",
-    responsibilities: [
-      "Configured and maintained scalable cloud environments ensuring high availability and uptime",
-      "Automated repetitive deployment workflows and established standardized CI/CD pipelines",
-      "Implemented security best practices for access control, environment variables, and cloud configurations"
-    ],
-    technologies: ["AWS", "Docker", "CI/CD", "Linux", "Terraform", "Git"],
-    verifiedStatus: "Verified Professional Experience"
-  },
   {
     id: "mentor-me",
     organization: "Mentor Me",

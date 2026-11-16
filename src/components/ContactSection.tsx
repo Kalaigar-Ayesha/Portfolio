@@ -65,9 +65,9 @@ export default function ContactSection() {
             <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2">
               <a
                 href={`tel:${PERSONAL_INFO.phoneRaw}`}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#D1FFBD] hover:bg-[#bbf7d0] border border-emerald-400 text-emerald-950 text-xs font-bold transition-all shadow-xs active:scale-95"
               >
-                <Phone className="w-3.5 h-3.5 text-[#D1FFBD]" />
+                <Phone className="w-3.5 h-3.5 text-emerald-900" />
                 <span>Call Now</span>
               </a>
               <button
@@ -141,9 +141,9 @@ export default function ContactSection() {
             <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#D1FFBD] hover:bg-[#bbf7d0] border border-emerald-400 text-emerald-950 text-xs font-bold transition-all shadow-xs active:scale-95"
               >
-                <Mail className="w-3.5 h-3.5 text-[#D1FFBD]" />
+                <Mail className="w-3.5 h-3.5 text-emerald-900" />
                 <span>Send Email</span>
               </a>
               <button
