@@ -33,16 +33,26 @@ export interface ProblemSolutionItem {
   iconName: string;
 }
 
+export interface ExperienceSubRole {
+  role: string;
+  period: string;
+  description: string;
+  responsibilities: string[];
+  technologies: string[];
+}
+
 export interface ExperienceItem {
   id: string;
   organization: string;
   role: string;
-  period: string; // [Editable Placeholder]
+  period: string;
   location: string;
+  employmentType?: string;
   description: string;
   responsibilities: string[];
   technologies: string[];
   verifiedStatus: string;
+  subRoles?: ExperienceSubRole[];
 }
 
 export interface TestimonialItem {

@@ -247,19 +247,80 @@ export const TECHNICAL_SKILLS = {
 
 export const PROFESSIONAL_EXPERIENCE: ExperienceItem[] = [
   {
+    id: "asariya-forum",
+    organization: "Asariya Forum",
+    role: "DevOps & Cloud Engineer",
+    period: "Jun 2026 – Present",
+    location: "Remote",
+    employmentType: "Freelance",
+    description: "Designed the whole infrastructure, solution architecture, and implemented production-grade DevOps deployment workflows.",
+    responsibilities: [
+      "Designed and implemented the DevOps and cloud deployment architecture for a digital library platform managing 6,000+ book PDFs",
+      "Built secure deployment workflows covering application hosting, containerization, database infrastructure, object storage, backups, and environment configuration",
+      "Implemented CI/CD and automated deployment workflows to improve release consistency and reduce manual deployment effort",
+      "Worked on production-oriented security, storage, backup, monitoring, and deployment reliability for the client application",
+      "Collaborated on infrastructure decisions and deployment requirements to support a scalable and maintainable production environment"
+    ],
+    technologies: ["Solution Architecture", "Cloud Infrastructure", "Docker", "AWS / Object Storage", "CI/CD", "Linux", "Security"],
+    verifiedStatus: "Freelance / Verified"
+  },
+  {
     id: "mentor-me",
     organization: "Mentor Me",
-    role: "Technical & DevOps Contributor",
-    period: "",
-    location: "",
-    description: "Contributed to DevOps best practices, cloud deployments, and pipeline architectures across engineering initiatives.",
+    role: "DevOps Engineer & Web Associate",
+    period: "Dec 2025 – Present · 1 yr",
+    location: "Remote",
+    employmentType: "Remote",
+    description: "Progressed from Web & Technical Associate to DevOps Engineer, leading containerization, AWS cloud setups, and CI/CD automation.",
     responsibilities: [
-      "Guided developers on Docker containerization, Kubernetes fundamentals, and cloud migration strategies",
-      "Advised on pipeline design using GitHub Actions, automated testing, and security scanning",
-      "Conducted architecture reviews and troubleshooting sessions for distributed applications"
+      "Dockerised the core application services for standardized local development and seamless production releases",
+      "Provisioned and maintained AWS cloud infrastructure and deployment environments",
+      "Engineered automated CI/CD pipelines using GitHub Actions for automated testing, builds, and zero-downtime deployments",
+      "Built and maintained core website features and user interfaces during the Web and Technical Associate role",
+      "Performed comprehensive API testing, validation, and documentation using Postman API"
     ],
-    technologies: ["Docker", "Kubernetes", "GitHub Actions", "Linux", "Python", "Cloud Architecture"],
-    verifiedStatus: "Verified Professional Experience"
+    technologies: ["Docker", "AWS", "GitHub Actions", "CI/CD", "Linux", "Website Building", "Postman API", "Container Orchestration"],
+    verifiedStatus: "Verified Professional Experience",
+    subRoles: [
+      {
+        role: "DevOps Engineer",
+        period: "Apr 2026 – Present",
+        description: "Led containerization, cloud infrastructure, and CI/CD pipelines for application services.",
+        responsibilities: [
+          "Dockerised application workloads ensuring environment parity between development and production",
+          "Configured AWS cloud infrastructure and deployment environments",
+          "Automated end-to-end testing, image builds, and deployments with GitHub Actions CI/CD"
+        ],
+        technologies: ["Docker", "AWS", "GitHub Actions", "CI/CD", "Container Orchestration", "Linux"]
+      },
+      {
+        role: "Web & Technical Associate",
+        period: "Dec 2025 – Apr 2026",
+        description: "Worked on website building, responsive frontend interfaces, and API integrations.",
+        responsibilities: [
+          "Contributed directly to building and maintaining the official Mentor Me website",
+          "Conducted API testing, validation, and endpoint documentation using Postman API",
+          "Assisted with technical bug fixes, responsive UI adjustments, and cross-browser testing"
+        ],
+        technologies: ["Website Building", "Postman API", "Full-Stack Development", "JavaScript", "REST APIs"]
+      }
+    ]
+  },
+  {
+    id: "girl-up-coders",
+    organization: "Girl Up Coders",
+    role: "Web Developer",
+    period: "Jun 2025 – Jul 2026 · 1 yr 2 mos",
+    location: "Remote",
+    employmentType: "Remote",
+    description: "Worked on full-stack web development projects, building responsive frontend interfaces and backend services.",
+    responsibilities: [
+      "Collaborated with team members to design, develop, test, and deploy web applications",
+      "Gained hands-on experience with Git, GitHub, debugging, API integration, and application deployment",
+      "Built responsive, accessible user interfaces following clean code and modern web standards"
+    ],
+    technologies: ["Full-Stack Development", "Git", "GitHub", "API Integration", "JavaScript", "Responsive Design"],
+    verifiedStatus: "Verified Experience"
   }
 ];
 
