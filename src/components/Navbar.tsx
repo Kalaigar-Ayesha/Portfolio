@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  Terminal, 
-  Menu, 
-  X, 
+import {
+  Terminal,
+  Menu,
+  X,
   ArrowUpRight
 } from 'lucide-react';
 
@@ -30,19 +30,18 @@ export default function Navbar() {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-[#0e2a1d]/95 backdrop-blur-md border-b border-emerald-700/60 shadow-lg shadow-emerald-950/40 py-3' 
-          : 'bg-transparent py-5'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-[#0e2a1d]/95 backdrop-blur-md border-b border-emerald-700/60 shadow-lg shadow-emerald-950/40 py-3'
+        : 'bg-transparent py-5'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
+
           {/* Brand Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-emerald-400 rounded-lg p-1"
           >
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-600/40 to-green-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-300 group-hover:border-emerald-300 transition-all shadow-sm">
@@ -127,7 +126,7 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-          
+
           <div className="pt-4 border-t border-emerald-800/80 flex flex-col gap-3">
             <div className="flex items-center gap-2 text-xs text-emerald-300 font-mono">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>

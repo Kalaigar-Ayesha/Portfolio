@@ -75,7 +75,7 @@ export default function TerminalWidget() {
 
   return (
     <div className="flex flex-col h-[450px] bg-[#0e2a1d] text-emerald-100 font-mono text-xs select-text">
-      
+
       {/* Terminal Title Bar */}
       <div className="flex items-center justify-between px-4 py-2.5 bg-[#143d2b] border-b border-emerald-700/60">
         <div className="flex items-center gap-2">
@@ -111,11 +111,10 @@ export default function TerminalWidget() {
               key={tab.id}
               type="button"
               onClick={() => setActiveTabId(tab.id)}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-t-lg text-xs font-mono transition-all cursor-pointer ${
-                isActive
-                  ? 'bg-[#0e2a1d] text-emerald-300 border-t-2 border-emerald-400 font-bold shadow-sm'
-                  : 'text-emerald-300/70 hover:text-white'
-              }`}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-t-lg text-xs font-mono transition-all cursor-pointer ${isActive
+                ? 'bg-[#0e2a1d] text-emerald-300 border-t-2 border-emerald-400 font-bold shadow-sm'
+                : 'text-emerald-300/70 hover:text-white'
+                }`}
             >
               <Icon className="w-3.5 h-3.5 text-emerald-400" />
               <span>{tab.title}</span>
@@ -155,7 +154,7 @@ export default function TerminalWidget() {
             </div>
           );
         })}
-        
+
         {/* Blinking cursor */}
         <div className="flex items-center gap-1 text-emerald-400 pt-2">
           <span>ayesha@cloud-devops:~$</span>

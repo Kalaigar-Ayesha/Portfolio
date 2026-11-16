@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
 import { LinkedInIcon } from '@/components/SocialIcons';
 import { trackEvent } from '@/lib/analytics';
-import { 
-  Phone, 
-  Mail, 
-  Copy, 
-  Check, 
-  MessageSquare, 
-  CheckCircle2, 
+import {
+  Phone,
+  Mail,
+  Copy,
+  Check,
+  MessageSquare,
+  CheckCircle2,
   ArrowUpRight
 } from 'lucide-react';
 
@@ -78,7 +78,7 @@ export default function Contact() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[650px] h-[300px] bg-gradient-to-tr from-emerald-500/20 via-green-400/15 to-transparent blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Heading */}
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#143d2b] border border-emerald-600/50 text-emerald-200 text-xs font-mono tracking-wider mb-3">
@@ -94,10 +94,10 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Direct Phone, Email & LinkedIn Channels */}
           <div className="lg:col-span-5 space-y-4">
-            
+
             {/* Phone & WhatsApp Card */}
             <div className="p-5 rounded-2xl bg-[#143d2b] border border-emerald-700/70 hover:border-emerald-400 transition-all shadow-sm">
               <div className="flex items-center justify-between mb-3">
@@ -233,7 +233,7 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                
+
                 {/* Honeypot anti-spam trap */}
                 <input
                   type="text"
